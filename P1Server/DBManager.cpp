@@ -1,27 +1,16 @@
 #include "DBManager.h"
 
-void CDBManager::InitDB()
+void CDBManager::NativeConstruct()
 {
-	printf("CDBManager::InitDB() was called\n");
 
-	// Set redis -> Only raid combat.
-
-	// Set DB (mysql)
-
-	return;
 }
 
-void CDBManager::CloseDB()
+void CDBManager::NativeDestruct()
 {
-	printf("CDBManager::CloseDB() was called\n");
-	SaveCacheToDB();
+
 }
 
-void CDBManager::SaveCacheToDB()
+void CDBManager::NativeTick()
 {
-	printf("CDBManager::SaveCacheToDB() was called\n");
 
-	// save cache to db
-
-	return;
 }

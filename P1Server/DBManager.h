@@ -1,24 +1,15 @@
 #pragma once
-#include "Singleton.h"
+#include "Core.h"
 
-// DBManager was created by singleton. because of in app purchase.
-// so, should be saved in any position
-
-class CDBManager :
-	public CSingleton<typename CDBManager>
+class CDBManager : public CCore
 {
 public:
 	explicit CDBManager() {}
-	virtual ~CDBManager()
-	{
-		CloseDB();
-	}
+	virtual ~CDBManager() {}
 
 public:
-	void InitDB();
-	void CloseDB();
-
-private:
-	void SaveCacheToDB();
+	virtual void NativeConstruct() override;
+	virtual void NativeDestruct() override;
+	virtual void NativeTick() override;
 };
 

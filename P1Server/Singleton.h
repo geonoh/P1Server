@@ -9,9 +9,14 @@ private:
 
 public:
 	CSingleton() {}
-	~CSingleton() { DestroyInstance(); }
+	~CSingleton() {}
 
-	static T* GetInstance()
+public:
+	virtual void NativeConstruct() = 0;
+	virtual void NativeDestruct() = 0;
+
+public:
+	static T* Get()
 	{
 		printf("CSingleton::GetInstance() was called\n");
 
@@ -23,7 +28,7 @@ public:
 		return Instance;
 	}
 
-	static void DestroyInstance()
+	static void Destroy()
 	{
 		printf("CSingleton::DestroyInstance() was called\n");
 

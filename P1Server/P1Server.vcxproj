@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Core.cpp" />
+    <ClCompile Include="Store.cpp" />
     <ClCompile Include="ThreadManager.cpp" />
     <ClCompile Include="DBManager.cpp" />
     <ClCompile Include="main.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="DBManager.h" />
     <ClInclude Include="P1Define.h" />
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="Store.h" />
     <ClInclude Include="ThreadManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,36 +1,22 @@
-#include "P1Define.h"
 #include "DBManager.h"
+#include "P1Define.h"
+#include "Store.h"
 #include "ThreadManager.h"
 
-void DeclareObject();
-void Initializer();
-void Destroyer();
+void Constructor();
+void Destructor();
 
 int main()
 {
-	Initializer();
-	// DB Thread
-
-	// Game Logic Thread - World, Lobby
-
-	// 
-	Destroyer();
+	Constructor();
+	Destructor();
 }
 
-void DeclareObject()
+void Constructor()
 {
 
 }
 
-void Initializer()
+void Destructor()
 {
-	CThreadManager ThreadManager;
-
-	CDBManager::GetInstance()->InitDB();
-
-}
-
-void Destroyer()
-{
-	CDBManager::GetInstance()->CloseDB();
 }

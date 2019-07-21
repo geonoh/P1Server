@@ -1,11 +1,16 @@
 #include "ThreadManager.h"
 
-void CThreadManager::AssignThread()
+void CThreadManager::NativeConstruct()
 {
 
 }
 
-void CThreadManager::ExpelThread()
+void CThreadManager::NativeDestruct()
+{
+
+}
+
+void CThreadManager::NativeTick()
 {
 
 }

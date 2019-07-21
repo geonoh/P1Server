@@ -1,12 +1,14 @@
 #pragma once
+#include "Core.h"
 
-class CThreadManager
+class CThreadManager : public CCore
 {
 public:
-	CThreadManager() {}
-	~CThreadManager() {}
+	explicit CThreadManager() {}
+	virtual ~CThreadManager() {}
 
 public:
-	void AssignThread();
-	void ExpelThread();
+	virtual void NativeConstruct() override;
+	virtual void NativeDestruct() override;
+	virtual void NativeTick() override;
 };

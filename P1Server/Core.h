@@ -1,15 +1,13 @@
 #pragma once
-#include "Singleton.h"
 
-class CCore :
-	public CSingleton<typename CCore>
+class CCore
 {
-private:
-	virtual void NativeConstruct();
-	virtual void NativeDesturct();
-	virtual void NativeTick();
+public:
+	CCore() {}
+	~CCore() {}
 
-protected:
-
+public:
+	virtual void NativeConstruct() = 0;
+	virtual void NativeDestruct() = 0;
+	virtual void NativeTick() = 0;
 };
-
